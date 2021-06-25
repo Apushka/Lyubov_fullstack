@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Didot';
+    src: url('../../assets/fonts/Didot.ttc') format('ttc');
+}
+
+.main {
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.main__container {
+}
+
+.main__body {
+    
+}
+
+.video__container {
+    max-width: 100%;
+}
+
+.video__container .video__background {
+    width: 100%;
+    display: block;
+    border-bottom: 12px solid black;
+}
+
+.info {
+    text-align: center;
+}
+
+.content .row {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.row .info,
+.row .image {
+    width: 50%;
+}
+
+.row .info {
+    margin: auto;
+}
+
+.row .info .readMore a {
+    display: inline-block;
+    padding: 20px 70px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
+
+.row .info .readMore a:hover {
+    background-color: #404040;
+}
+
+.row .image {
+    background: url('../../assets/images/main/slide1.jpg') no-repeat center/cover;
+}
+
+.row .info .text {
+    font-family: 'Didot', serif;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-bottom: 50px;
+}
+
+.content .row:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+.content .row:nth-child(2) .image {
+    background: url('../../assets/images/main/slide2.jpg') no-repeat center/cover;
+}
+
+.content .row:nth-child(3) .image {
+    background: url('../../assets/images/main/slide3.jpg') no-repeat center/cover;
+}

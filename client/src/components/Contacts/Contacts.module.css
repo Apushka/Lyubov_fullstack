@@ -1,0 +1,128 @@
+.contacts__wrapper {
+    width: 100%;
+}
+
+.contacts__container {
+    display: flex;
+    justify-content: center;
+}
+
+.contacts__body {
+    width: 50%;
+}
+
+.contacts__body form {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contacts__body h2 {
+    font-size: 28px;
+    font-weight: 200;
+}
+
+.contacts__body form label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.contacts__body form input,
+.contacts__body form select,
+.contacts__body form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 15px;
+    height: 40px;
+    border: 1px solid #d4d4d4;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+}
+
+.contacts__body form select {
+    position: relative;
+    -webkit-appearance: none;
+}
+
+.contacts__body form .select__container {
+    position: relative;
+}
+
+.contacts__body form .select__container::after {
+    content: '';
+    top: 18px;
+    right: 10px;
+    position: absolute;
+    border: 5px solid transparent;
+    border-top-color: black;
+}
+
+
+.contacts__body form input:focus,
+.contacts__body form textarea:focus,
+.contacts__body form select:focus {
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 2px;
+    box-shadow: 0 0 20px 0 #d4d4d4;
+}
+
+.contacts__body form textarea {
+    min-height: 150px; 
+    resize: none;
+}
+
+.contacts__body .send__button {
+    text-align: center;
+}
+.contacts__body .send__button label {
+    padding: 20px 70px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.2s ease;
+    margin: 0 auto;
+}
+
+.contacts__body .send__button button {
+    display: none;
+}
+
+.contacts__body .send__button label:hover {
+    background-color: #404040;
+}
+
+/* .contacts__body button {
+    width: 100px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+} */
+
+.error,
+ .success {
+     display: block;
+     color: red;
+     margin-top: -10px;
+     margin-bottom: 10px;
+ }
+
+ .name label::after,
+ .email label::after,
+ .subject label::after {
+     content: ' *';
+     color: red;
+ }
+
+.sent__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;  
+    text-align: center;  
+}
+
+.thanks {
+    font-weight: 200;
+}

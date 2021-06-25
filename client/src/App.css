@@ -1,0 +1,11 @@
+.app_wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.app_wrapper_content {
+    padding-top: 50px;
+    color: black;
+}
+

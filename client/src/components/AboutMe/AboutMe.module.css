@@ -1,0 +1,48 @@
+.aboutme {
+    max-width: 100%;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.aboutme__container {
+
+}
+
+.aboutme__body {
+}
+
+.header__container {
+    max-width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+    border-bottom: 12px solid black;
+}
+.header__container img {
+    width: 100%;
+}
+
+.aboutmeInfo {
+    position: relative;
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.aboutmeInfo p {
+    width: 100%;
+    margin: 0;
+    text-indent: 20px;
+    text-align: center;
+    white-space: pre-wrap;
+}
+
+.aboutmeInfo .edit {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 40px;
+    right: 0.5%;
+    cursor: pointer;
+    background: url('./../../assets/images/changeItem.png') no-repeat center/60%;
+}
+

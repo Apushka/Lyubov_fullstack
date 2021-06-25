@@ -1,0 +1,9 @@
+.modal__body {
+    max-width: 35vw;
+}
+
+.modal__body .zoomedPhoto {
+    vertical-align: middle;
+    width: 100%;
+    
+}

@@ -1,0 +1,207 @@
+.post__container {
+    max-width: 1000px;
+    margin: 50px auto 30px auto;
+}
+
+.post__container .post {
+    width: 100%;
+    text-align: center;
+}
+
+.post .category__container {
+    margin-bottom: 25px;
+}
+
+.post .category__container select {
+    font: inherit;
+}
+
+.post .title,
+.post .title__edit {
+    margin: 0 0 50px 0;
+    padding: 0;
+    text-align: center;
+    font: inherit;
+    font-size: 28px;
+    font-weight: 200;
+}
+
+.post .title__edit {
+    border: none;
+}
+
+.post .post__body {
+    width: 100%;
+    font: inherit;
+    resize: none;
+    min-height: 350px;
+}
+
+.headerMedia__container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.headerMedia__container,
+.photo__gallery__container,
+.video__gallery__container {
+    min-height: 100px;
+}
+
+.headerMedia__container .headerMedia {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.headerMedia .media {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.headerMedia img,
+.headerMedia video {
+    width: 100%;
+}
+
+.add__button {
+    position: absolute;
+}
+
+.add__button label {
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    z-index: 200;
+}
+
+.add__button label::before,
+.add__button label::after {
+    position: absolute;
+    content: '';
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+.add__button label::after {
+    transform: rotate(90deg);
+}
+
+.add__button input {
+    display: none;
+}
+
+.post__body__container {
+    margin-bottom: 50px;
+}
+
+.post__body__container p {
+    white-space: pre-wrap;
+}
+
+.photo__gallery__container,
+.video__gallery__container {
+    width: 100%;
+    position: relative;
+}
+
+.photo__gallery,
+.video__gallery {
+    width: 80%;
+    margin: 0 auto 25px auto;
+}
+
+.photo__container,
+.video__container {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.photo__container {
+    display: inline-block;
+    width: 30%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.photo__container:last-of-type {
+    margin-right: 0;
+}
+
+.photo__container img,
+.video__container video {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.post .save__button {
+    text-align: center;
+}
+.post .save__button label {
+    display: inline-block;
+    padding: 20px 70px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.2s ease;
+    margin: 0 auto;
+}
+
+.post .save__button button {
+    display: none;
+}
+
+.post .save__button label:hover {
+    background-color: #404040;
+}
+
+.update,
+.delete {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 15px;
+    background: url('../../../assets/images/deleteIcon.png') no-repeat center/contain;
+    border-radius: 5px;
+}
+
+.update {
+    top: 0;
+    background: url('../../../assets/images/changeItem.png') no-repeat center/50%;
+}
+
+.hidden {
+    display: none;
+}
+
+.sent__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;  
+    text-align: center;  
+}
+
+.thanks {
+    font-weight: 200;
+}
+
+.placeholder {
+    display: inline-block;
+    width: 100%;
+    margin-left: 50px;
+    opacity: 0.5;
+}

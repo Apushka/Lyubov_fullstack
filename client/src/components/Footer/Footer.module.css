@@ -1,0 +1,89 @@
+.footer {
+   width: 100%;
+   background-color: black;
+   height: 40px;
+   color: white;
+   padding: 0 0;
+   font-size: 14px;
+   font-weight: 400;
+}
+
+.footer__container {
+   max-width: 1000px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
+
+.footer__body {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.footer__body .credits {
+   text-transform: uppercase;
+   font-size: 10px;
+}
+
+.links {
+   display: flex;
+   align-items: center;
+   height: 40px;
+}
+
+.links a {
+   display: block;
+   height: inherit;
+   width: 20px;
+   height: 20px;
+   margin-right: 10px;
+   background: url('../../assets/images/social_icons.png') no-repeat;
+   background-size: 150px;
+}
+
+.links .vk__link {
+   background-position: 0 0;
+}
+
+.links .fb__link {
+   background-position-x: -104px;
+}
+
+
+.links .instagram__link {
+   background-position-x: -26px;
+}
+
+.links .vk__link,
+.links .fb__link,
+.links .instagram__link {
+   filter: grayscale(100%);
+}
+
+
+.links .vk__link:hover,
+.links .fb__link:hover,
+.links .instagram__link:hover {
+   filter: none;
+}
+
+
+.cabinet {
+   display: flex;
+   align-items: center;
+   width: 20px;
+   height: 20px;
+}
+
+.enter,
+.exit {
+   cursor: pointer;
+   width: 100%;
+   height: inherit;
+   background: url('../../assets/images/enterIcon.png') no-repeat center/100%;
+   filter: invert(100%);
+}
+
+.exit {
+   background: url('../../assets/images/exitIcon.png') no-repeat center/100%;
+} 
