@@ -17,12 +17,12 @@ const LoginModal = (props) => {
                 <div>
                     <label htmlFor='email'>E-mail</label>
                     <br />
-                    <input {...register('email')} type='text' />
+                    <input {...register('email')} type='text' placeholder='apushkaa2.0gmail.com' />
                 </div>
                 <div>
                     <label htmlFor='password'>Пароль</label>
                     <br />
-                    <input {...register('password')} type='password' />
+                    <input {...register('password')} type='password' placeholder='12345' />
                 </div>
                 <div>
                     <button className={styles.enter}>Войти</button>
