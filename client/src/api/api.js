@@ -1,12 +1,12 @@
 import * as axios from 'axios';
 
 const instance = axios.create({
-    baseURL: '/api/'
+    baseURL: 'http://localhost:5000/api/'
 })
 
 export const authAPI = {
     login(formData) {
-        return axios.post('api/auth/login', formData, {
+        return instance.post('auth/login', formData, {
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -16,7 +16,7 @@ export const authAPI = {
             })
     },
     logout(email) {
-        return axios.delete(`api/auth/login?email=${email}`)
+        return instance.delete(`auth/login?email=${email}`)
             .then(response => {
                 return response;
             })
@@ -26,13 +26,13 @@ export const authAPI = {
 
 export const aboutAPI = {
     getAbout() {
-        return axios.get('api/about')
+        return instance.get('about')
             .then(response => {
                 return response;
             })
     },
     updateAbout(AboutMe) {
-        return axios.patch('api/about', AboutMe, {
+        return instance.patch('about', AboutMe, {
             headers: {
                 'Authorization': sessionStorage.getItem('token')
             }
@@ -45,7 +45,7 @@ export const aboutAPI = {
 
 export const portfolioAPI = {
     getPorfolio() {
-        return axios.get('api/portfolio')
+        return instance.get('portfolio')
             .then(response => {
                 return response.data.imageSrc;
             })
@@ -53,7 +53,7 @@ export const portfolioAPI = {
     addPhoto(photo) {
         const formData = new FormData();
         formData.append('image', photo);
-        return axios.put('api/portfolio', formData, {
+        return instance.put('portfolio', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
                 'Authorization': sessionStorage.getItem('token')
@@ -64,7 +64,7 @@ export const portfolioAPI = {
         const formData = new FormData();
         formData.append('id', photoId);
         formData.append('image', photo);
-        return axios.patch('api/portfolio', formData, {
+        return instance.patch('portfolio', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
                 'Authorization': sessionStorage.getItem('token')
@@ -73,7 +73,7 @@ export const portfolioAPI = {
     },
 
     deletePhoto(photoId) {
-        return axios.delete(`api/portfolio?id=${photoId}`, {
+        return instance.delete(`portfolio?id=${photoId}`, {
             headers: {
                 'Authorization': sessionStorage.getItem('token')
             }
@@ -86,13 +86,13 @@ export const portfolioAPI = {
 
 export const blogAPI = {
     getBlog(currentPage, pageSize, category) {
-        return axios.get(`api/blog?category=${category}&page=${currentPage}&limit=${pageSize}`)
+        return instance.get(`blog?category=${category}&page=${currentPage}&limit=${pageSize}`)
             .then(response => {
                 return response;
             })
     },
     getPost(postId) {
-        return axios.get(`api/blog/post/?postId=${postId}`)
+        return instance.get(`blog/post/?postId=${postId}`)
             .then(response => {
                 return response;
             })
@@ -111,7 +111,7 @@ export const blogAPI = {
         }
         Array.prototype.forEach.call(post.video, video => formData.append('video', video));
 
-        return axios.put(`api/blog/post?postId=${'create'}`, formData, {
+        return instance.put(`blog/post?postId=${'create'}`, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
                 'Authorization': sessionStorage.getItem('token')
@@ -123,7 +123,7 @@ export const blogAPI = {
             })
     },
     deletePost(postId) {
-        return axios.delete(`api/blog/post?postId=${postId}`, {
+        return instance.delete(`blog/post?postId=${postId}`, {
             headers: {
                 'Authorization': sessionStorage.getItem('token')
             }
@@ -146,7 +146,7 @@ export const blogAPI = {
         post.image.forEach(e => formData.append('image', e));
         post.video.forEach(e => formData.append('video', e));
 
-        return axios.patch(`api/blog/post?postId=${post._id}`, formData, {
+        return instance.patch(`blog/post?postId=${post._id}`, formData, {
             headers: {
                 'Content-type': 'multipart/form-data',
                 'Authorization': sessionStorage.getItem('token')
@@ -161,7 +161,7 @@ export const blogAPI = {
 
 export const contactsAPI = {
     sendMessage(message) {
-        return axios.post('api/contacts/send', message)
+        return instance.post('contacts/send', message)
             .then(response => {
                 return response
             })
