@@ -4,8 +4,6 @@ import * as axios from 'axios';
 //     baseURL: 'http://localhost:5000/api/'
 // })
 
-axios.defaults.baseURL = "http://localhost:5000";
-
 export const authAPI = {
     login(formData) {
         return axios.post('/api/auth/login', formData, {
