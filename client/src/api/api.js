@@ -26,7 +26,7 @@ export const authAPI = {
 
 export const aboutAPI = {
     getAbout() {
-        return instance.get('about')
+        return axios.get('/api/about')
             .then(response => {
                 return response;
             })
