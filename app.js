@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const passport = require('passport')
+const path = require('path');
 const morgan = require('morgan')
 const authRoutes = require('./routes/auth')
 const aboutmeRoutes = require('./routes/aboutme');
@@ -34,5 +35,17 @@ app.use('/api/about', aboutmeRoutes)
 app.use('/api/portfolio', portfolioRoutes);
 app.use('/api/blog', blogRoutes);
 app.use('/api/contacts', contactsRoutes);
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'))
+
+    app.get('*', (req, res) => {
+        res.sendFile(
+            path.resolve(
+                __dirname, 'client', 'build', 'index.html'
+            )
+        )
+    })
+}
 
 module.exports = app
