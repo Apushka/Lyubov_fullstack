@@ -85,6 +85,7 @@
 @media (max-width: 767px) {
     .header {
         height: 40px;
+        outline: 1px solid red;
     }
     .logo {
         flex: 0 0 100px;
@@ -136,7 +137,7 @@
 
     .menu {
         position: fixed;
-        top: -100%;
+        top: -150%;
         left: 0;
         background-color: black;
         width: 100%;
