@@ -126,3 +126,13 @@
 .thanks {
     font-weight: 200;
 }
+
+@media (max-width: 767px) {
+    .contacts__body {
+        width: 90%;
+    }
+    .contacts__body .send__button label {
+        font-size: 14px;
+        padding: 15px 30px;
+    }
+}

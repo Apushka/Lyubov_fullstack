@@ -96,6 +96,7 @@
     cursor: pointer;
     left: -180px;
     transform: translateY(-50%);
+
 }
 
 .gallery__modal .forward {
@@ -122,6 +123,31 @@
     from { right: -180px}
     50% { right: -185px}
     to { right: -180px}
+}
+
+@media (max-width: 767px) {
+    .gallery {
+        display: flex;
+        flex-direction: column;
+    }
+    .gallery__modal .backward,
+    .gallery__modal .forward {
+        position: absolute;
+        top: 50%;
+        width: 150px;
+        height: 100%;
+        background-size: 20%;
+        filter: invert(100%);
+    }
+    .gallery__modal .backward {
+        left: -90px;
+        transform: translateY(-50%);
+    }
+
+    .gallery__modal .forward {
+        right: -90px;
+        transform: rotateY(180deg) translateY(-50%);
+    }
 }
 
 .gallery__edit__container .image input {

@@ -35,6 +35,10 @@ const Contacts = (props) => {
                                 required: {
                                     value: true,
                                     message: 'Введите Ваш e-mail'
+                                },
+                                pattern: {
+                                    value: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,
+                                    message: 'Неверный формат e-mail'
                                 }
                             })} type='text' placeholder='Ваш e-mail' />
                             {errors.email && <span className={styles.error}>{errors.email.message}</span>}

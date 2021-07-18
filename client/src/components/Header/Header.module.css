@@ -3,28 +3,48 @@
     width: 100vw;
     background-color: black;
     color: white;
-    min-height: 50px;
+    height: 50px;
     z-index: 100;
     font-size: 14px;
     font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.header:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
 }
 
  .container {
+    padding: 10px;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-
 .header__body {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .logo {
-    flex: 0 0 15%;
+    flex: 0 0 120px;
+    z-index: 5;
+}
+
+.menu {
+    position: relative;
+}
+
+.menu_burger {
+    display: none;
 }
 
 .logo img {
@@ -34,6 +54,7 @@
 
 .list {
     padding: 0;
+    margin: 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
@@ -45,8 +66,11 @@
     white-space: pre;
     cursor: pointer;
     margin: 0 40px 0 0;
-    color: inherit;
+    color: #858585;
     text-decoration: none;
+}
+.list li:last-child a {
+    margin: 0;
 }
 
 .list li a:hover {
@@ -54,5 +78,89 @@
 }
 
 .linkActive {
-    color: #858585 !important;
+    color: white !important;
+}
+
+
+@media (max-width: 767px) {
+    .header {
+        height: 40px;
+    }
+    .logo {
+        flex: 0 0 100px;
+    }
+    .menu_burger {
+        position: relative;
+        display: block;
+        width: 20px;
+        height: 14px;
+        z-index: 5;
+    }
+    .menu_burger span {
+        position: absolute;
+        left: 0;
+        top: 6px;
+        width: 100%;
+        height: 2px;
+        background-color: white;
+        transition: all 0.3s ease 0s;
+    }
+    .menu_burger:before,
+    .menu_burger:after {
+        content: '';
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+    .menu_burger:before {
+        top: 0;
+    }
+    .menu_burger:after {
+        bottom: 0;
+    }
+
+    .menu_burger.active:before {
+        transform: rotate(45deg);
+        top: 6px;
+    }
+    .menu_burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 6px;
+    }
+    .menu_burger.active span {
+        transform: scale(0);
+    }
+
+    .menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        background-color: black;
+        width: 100%;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        transition: all 0.3s ease 0s;
+        overflow: auto;
+    }
+    .menu .list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        height: inherit;
+        outline: 1px solid green;
+        margin: 0;
+    }
+    .menu .list a {
+        margin: 0;
+        padding: 0;
+    }
+
+    .menu.active {
+        top: 0
+    }
 }

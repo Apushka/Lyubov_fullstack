@@ -44,3 +44,9 @@
     background: url('../../assets/images/close.png') no-repeat top/60%;
     filter: invert(100%);
 }
+
+@media (max-width: 767px) {
+    .main .close {
+        right: -25px;
+    }
+}

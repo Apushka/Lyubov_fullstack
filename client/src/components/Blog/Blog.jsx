@@ -10,9 +10,9 @@ const Blog = (props) => {
                     <img src={avatar} alt='avatar' />
                 </div> */}
                 <nav className={styles.category}>
-                    <NavLink to={`/blog/${'video'}`} className={styles.video__category} >Видео</NavLink>
-                    <NavLink to={`/blog/${'makeupbag'}`} className={styles.makeupbag__category } >Косметичка</NavLink>
-                    <NavLink to={`/blog/${'life'}`} className={styles.life__category} >Life</NavLink>
+                    <NavLink to={`/blog/${'video'}`} className={styles.video__category} ><span>Видео</span></NavLink>
+                    <NavLink to={`/blog/${'makeupbag'}`} className={styles.makeupbag__category }><span>Косметичка</span></NavLink>
+                    <NavLink to={`/blog/${'life'}`} className={styles.life__category}><span>Life</span></NavLink>
                 </nav>
                 <div className={styles.blog__body}>
                     <div className={styles.posts__container}>

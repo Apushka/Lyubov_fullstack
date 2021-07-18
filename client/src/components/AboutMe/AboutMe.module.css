@@ -15,7 +15,7 @@
     max-width: 100%;
     max-height: 100vh;
     overflow: hidden;
-    border-bottom: 12px solid black;
+    /* border-bottom: 12px solid black; */
 }
 .header__container img {
     width: 100%;
@@ -44,5 +44,12 @@
     right: 0.5%;
     cursor: pointer;
     background: url('./../../assets/images/changeItem.png') no-repeat center/60%;
+}
+
+@media (max-width: 767px) {
+    .aboutmeInfo {
+        font-size: 12px;
+        padding: 15px;
+    }
 }
 

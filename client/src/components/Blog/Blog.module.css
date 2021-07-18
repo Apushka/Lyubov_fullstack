@@ -17,7 +17,6 @@
     width: 100%;
 }
 
-
 .category {
     display: flex;
     justify-content: space-between;
@@ -26,19 +25,30 @@
 .category .video__category,
 .category .makeupbag__category,
 .category .life__category {
+    position: relative;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 32px;
-    font-weight: bold;
     letter-spacing: 10px;
     color: white;
     text-transform: uppercase;
     width: 100%;
-    height: 45vh;
+    height: 30vh;
     margin-right: 10px;
+    text-decoration: none;
     filter: grayscale(100%);
+}
+
+@media (max-width: 1040px) {
+    .category .video__category,
+    .category .makeupbag__category,
+    .category .life__category {
+        font-size: 24px;
+        letter-spacing: 5px;
+        height: 20vh;
+    }
 }
 
 .category .video__category {
@@ -60,11 +70,21 @@
     filter: none;
 }
 
+.category .video__category span,
+.category .makeupbag__category span,
+.category .life__category span {
+    color: white;
+    background: black;
+    border: 2px solid whitesmoke;
+    padding-left: 10px;
+    z-index: 10;
+}
+
 .blog__body {
     display: flex;
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
-    padding-top: 50px;
+    padding: 50px 5px 0 5px;
     text-align: center;
 }
 
@@ -178,4 +198,52 @@
     padding: 20px 0;
     background-color: #f0f0f0;
     margin-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+    .category {
+        display: block;
+    }
+
+    .posts__container {
+        flex: 0 0 100%;
+    }
+
+    .headerMedia {
+        width: 100%;
+    }
+
+    .post h2 {
+        font-size: 20px;
+        margin: 0 0 20px 0;
+    }
+
+    .readMore {
+        margin-bottom: 20px;
+    }
+    .body__container p {
+        font-size: 0.8rem;
+    }
+
+    .readMore a {
+        padding: 15px 30px;
+        font-size: 0.8rem;
+    }
+
+
+    .category .video__category,
+    .category .makeupbag__category,
+    .category .life__category {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 5px;
+    }
+    .category .video__category span,
+    .category .makeupbag__category span,
+    .category .life__category span {
+        border: none;
+    }
+    .search {
+        display: none;
+    }
 }

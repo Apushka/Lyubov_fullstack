@@ -1,6 +1,6 @@
 .post__container {
     max-width: 1000px;
-    margin: 50px auto 30px auto;
+    margin: 50px auto 0 auto;
 }
 
 .post__container .post {
@@ -143,6 +143,42 @@
     margin: 0 auto;
 }
 
+@media (max-width: 767px) {
+    .post__container {
+        margin-top: 20px;
+
+    }
+    .post .title,
+    .post .title__edit {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .post__body__container {
+        margin-bottom: 20px;
+    }
+    .post__body__container p {
+        padding: 0 5px;
+        font-size: 0.8rem;
+    }
+    .headerMedia__container {
+        margin-bottom: 20px;
+    }
+    .headerMedia__container .headerMedia {
+        width: 100%;
+    }
+    .photo__container,
+    .video__container {
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .photo__gallery,
+    .video__gallery {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+}
+
 .post .save__button {
     text-align: center;
 }
@@ -205,3 +241,4 @@
     margin-left: 50px;
     opacity: 0.5;
 }
+
