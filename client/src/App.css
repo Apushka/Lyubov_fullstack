@@ -7,7 +7,7 @@
 .app_wrapper_content {
     padding-top: 50px;
     color: black;
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 @media (max-width: 767px) {
