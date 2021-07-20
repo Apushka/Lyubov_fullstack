@@ -126,7 +126,7 @@ const PostEdit = (props) => {
 
                             {!headerMedia.type && headerMedia.endsWith('.mp4') &&
                                 <div className={styles.media}>
-                                    <video src={headerMedia} controls='controls' autoPlay ></video>
+                                    <video src={headerMedia} controls='controls' autoPlay muted></video>
                                     <span className={styles.delete} onClick={onDeleteHeaderMedia}></span>
                                 </div>}
                             {headerMedia.type && (headerMedia.type.includes('image') && <div className={styles.media}>
@@ -134,7 +134,7 @@ const PostEdit = (props) => {
                                 <span className={styles.delete} onClick={onDeleteHeaderMedia}></span>
                             </div>)}
                             {headerMedia.type && (headerMedia.type.includes('video') && <div className={styles.media}>
-                                <video src={URL.createObjectURL(headerMedia)} controls='controls' autoPlay ></video>
+                                <video src={URL.createObjectURL(headerMedia)} controls='controls' autoPlay muted ></video>
                                 <span className={styles.delete} onClick={onDeleteHeaderMedia}></span>
                             </div>)}
                         </div>

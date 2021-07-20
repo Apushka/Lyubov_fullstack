@@ -46,3 +46,13 @@
     background-color: #404040;
 }
 
+@media (max-width: 767px) {
+    .aboutMe__modal__body {
+        width: 75vw;
+    }
+    .aboutMe__modal__body button {
+        width: 40%;
+        padding: 10px 5px;
+    }
+}
+

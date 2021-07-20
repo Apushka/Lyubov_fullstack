@@ -105,10 +105,6 @@
     transform: rotateY(180deg) translateY(-50%);
 }
 
-.gallery__modal .backward:hover {
-    animation: arrowBackward 1s linear infinite;
-}
-
 @keyframes arrowBackward {
     from { left: -180px;}
     50% { left: -185px;}
@@ -118,36 +114,14 @@
 .gallery__modal .forward:hover {
     animation: arrowForward 1s linear infinite;
 }
+.gallery__modal .backward:hover {
+    animation: arrowBackward 1s linear infinite;
+}
 
 @keyframes arrowForward {
     from { right: -180px}
     50% { right: -185px}
     to { right: -180px}
-}
-
-@media (max-width: 767px) {
-    .gallery {
-        display: flex;
-        flex-direction: column;
-    }
-    .gallery__modal .backward,
-    .gallery__modal .forward {
-        position: absolute;
-        top: 50%;
-        width: 150px;
-        height: 100%;
-        background-size: 20%;
-        filter: invert(100%);
-    }
-    .gallery__modal .backward {
-        left: -90px;
-        transform: translateY(-50%);
-    }
-
-    .gallery__modal .forward {
-        right: -90px;
-        transform: rotateY(180deg) translateY(-50%);
-    }
 }
 
 .gallery__edit__container .image input {
@@ -159,8 +133,8 @@
     display: block;
     top: 70px;
     left: 1.8%;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
 }
 
 .add__photo input {
@@ -181,7 +155,7 @@
     content: '';
     top: 45%;
     width: 100%;
-    height: 5px;
+    height: 3px;
     background-color: whitesmoke;
 }
 
@@ -212,3 +186,59 @@
     text-align: center;
     color: red;
 } 
+
+@media (max-width: 767px) {
+    .gallery {
+        display: flex;
+        flex-direction: column;
+    }
+    .gallery__edit__container {
+        padding-top: 0;
+    }
+    .gallery__modal .backward,
+    .gallery__modal .forward {
+        position: absolute;
+        top: 50%;
+        width: 150px;
+        height: 100%;
+        background-size: 20%;
+        filter: invert(100%);
+    }
+    .gallery__modal .backward {
+        left: -90px;
+        transform: translateY(-50%);
+    }
+
+    .gallery__modal .forward {
+        right: -90px;
+        transform: rotateY(180deg) translateY(-50%);
+    }
+    @keyframes arrowForward {
+        from { right: -90px}
+        50% { right: -92px}
+        to { right: -90px}
+    }
+    @keyframes arrowBackward {
+        from { left: -90px;}
+        50% { left: -92px;}
+        to { left: -90px;}
+    }
+    .gallery__modal .forward:hover,
+    .gallery__modal .backward:hover {
+        animation-duration: 0.5s;
+    }
+    .add__photo {
+        top: 11px;
+        left: unset;
+        right: 40px;
+        z-index: 100;
+    }
+    .gallery__edit__container .image .deletePhoto,
+    .gallery__edit__container .image .changePhoto {
+        width: 15px;
+        height: 15px;
+    }
+    .gallery__edit__container .image .deletePhoto {
+        top: 20px;
+    }
+}

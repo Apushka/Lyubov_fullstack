@@ -18,8 +18,8 @@
     position: relative;
     display: block;
     cursor: pointer;
-    width: 20px;
-    height: 20px; 
+    width: 15px;
+    height: 15px; 
 }
 
 .blog__body .create__post::before,
@@ -28,7 +28,7 @@
     content: '';
     top: 45%;
     width: 100%;
-    height: 5px;
+    height: 3px;
     background-color: black;
 }
 
@@ -83,4 +83,29 @@
 .post .update {
     top: 0;
     background: url('../../assets/images/changeItem.png') no-repeat center/50%;
+}
+
+@media (max-width: 767px) {
+    .blog__body .create__post {
+        position: fixed;
+        top: 11px;
+        right: 40px;
+        z-index: 100;
+        filter: invert();
+    }
+    .post .update,
+    .post .delete {
+        width: 15px;
+        height: 15px; 
+    }
+    .post .delete {
+        top: 20px;
+    }
+    .post h2 {
+        font-size: 2em;
+    }
+    .blog__body,
+    .post time  {
+        font-size: 0.7em;
+    }
 }

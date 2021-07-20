@@ -11,7 +11,7 @@ const Main = (props) => {
             <div className={styles.main__container}>
                 <div className={styles.main__body}>
                     <div className={styles.video__container}>
-                        <video className={styles.video__background} src={video} type='video/mp4' autoPlay='autoplay' muted loop='loop' playsInline />
+                        <video className={styles.video__background} src={video} type='video/mp4' autoPlay muted loop playsInline={true} playsinline={true} />
                     </div>
                     <div className={styles.content}>
                         <div className={styles.row}>

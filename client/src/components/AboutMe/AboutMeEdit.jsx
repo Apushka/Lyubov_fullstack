@@ -19,8 +19,8 @@ const AboutMeEdit = (props) => {
                         <img src={avatar} alt='avatar' />
                     </div>
                     <div className={styles.aboutmeInfo}>
-                        <p>{props.aboutInfo.aboutMe}</p>
                         <span className={styles.edit} onClick={onEditButton}></span>
+                        <p>{props.aboutInfo.aboutMe}</p>
                     </div>
                 </div>
                 {modal && <Modal modal={modal} setModal={setModal}>

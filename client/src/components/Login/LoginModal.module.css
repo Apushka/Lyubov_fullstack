@@ -43,3 +43,13 @@
 .login__body .enter:hover {
     background-color: #404040;
 }
+
+@media (max-width: 767px) {
+    .login__body {
+        width: 75vw;
+    }
+    .login__body .enter {
+        width: 40%;
+        padding: 10px;
+    }
+}

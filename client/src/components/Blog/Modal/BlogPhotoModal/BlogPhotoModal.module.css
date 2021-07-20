@@ -5,5 +5,10 @@
 .modal__body .zoomedPhoto {
     vertical-align: middle;
     width: 100%;
-    
+}
+
+@media (max-width: 767px) {
+    .modal__body {
+        max-width: 85vw;
+    }
 }
