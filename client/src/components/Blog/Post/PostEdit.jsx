@@ -47,7 +47,7 @@ const PostEdit = (props) => {
             }
             props.createPost(newPost);
             setModal(true);
-            reset();
+            // reset();
         } else {
             const updatedPost = {
                 _id: props.post._id,
@@ -62,7 +62,7 @@ const PostEdit = (props) => {
             }
             props.updatePost(updatedPost);
             setModal(true);
-            reset();
+            // reset();
         }
     }
 
