@@ -23,7 +23,7 @@ function App() {
           <Redirect exact from='/' to='/main' />
           <Route path='/about' render={() => <AboutMeContainer />} />
           <Route path='/portfolio' render={() => <PortfolioContainer />} />
-          <Route exact path='/blog/:category?' render={(props) => <BlogContainer {...props}/>} />
+          <Route exact path='/blog/:category?' render={(props) => <BlogContainer {...props} />} />
           {/* <Route path='/blog/makeupbag' component={BlogContainer} /> */}
           <Route path='/blog/post/:postId?' render={(props) => <PostContainer {...props} />} />
           <Route path='/contacts' render={() => <ContactsContainer />} />

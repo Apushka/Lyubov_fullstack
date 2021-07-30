@@ -1,5 +1,6 @@
 const errorHandler = require('../utils/errorHandler');
 const nodemailer = require('nodemailer');
+const keys = require('../config/keys');
 
 module.exports.sendEmail = async (req, res) => {
     const transporter = nodemailer.createTransport({
@@ -8,7 +9,7 @@ module.exports.sendEmail = async (req, res) => {
         secure: false,
         auth: {
             user: 'apushkaa2.0@gmail.com',
-            pass: 'mypcye899554'
+            pass: keys.gmail
         }
     });
     try {

@@ -18,6 +18,7 @@ const BlogContainer = (props) => {
         }
 
         if (fetching && (props.totalPages !== props.currentPage)) {
+            
             Promise.resolve(props.getBlog(currentPage, 3, category))
                 .then(() => {
                     setCurrentPage(prevState => prevState + 1);
